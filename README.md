@@ -1,4 +1,4 @@
-## Python Learning Mini Projects
+# Python Learning Mini Projects
 
 Welcome to my Python Mini Projects repository! This space is dedicated to showcasing my progress and skills as I delve into the world of Python programming. Each project here represents an exploration of concepts, tools, and techniques that I've learned along the way.
 
