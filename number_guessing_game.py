@@ -1,26 +1,26 @@
-#number_guesing_game
+# simple_number_guess_game
 
 from random import randint
 
-# Start the program with basic setup
-lower_num, upper_num = 1, 10
-random_number: int = randint(lower_num, upper_num)
-print(f'Guess the number in the range from {lower_num} to {upper_num}.')
+# Initialize the range and generate a random target number
+min_value, max_value = 1, 10
+target_number: int = randint(min_value, max_value)
+print(f'Try to guess the number between {min_value} and {max_value}.')
 
-# Run an infinite loop for the game
+# Start the game loop
 while True:
-    # Get the user guess
+    # Get the player's guess
     try:
-        user_guess: int = int(input('Guess: '))
-    except ValueError as e:
-        print('Please enter a valid number.')
+        player_guess: int = int(input('Your guess: '))
+    except ValueError:
+        print('Oops! Enter a valid integer.')
         continue
 
-    # Check the user guess
-    if user_guess > random_number:
-        print('The number is lower')
-    elif user_guess < random_number:
-        print('The number is higher')
+    # Compare the guess with the random number
+    if player_guess > target_number:
+        print('Too high! Try a smaller number.')
+    elif player_guess < target_number:
+        print('Too low! Try a larger number.')
     else:
-        print('You guessed it!')
+        print('Congrats! You guessed correctly.')
         break
